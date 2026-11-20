@@ -12,7 +12,8 @@ The App Store listing links here for its **Privacy Policy URL** (`privacy.html`)
 site.json            Name, description, URLs, support email, App Store link (empty until launch)
 src/layout.html      Page shell: head, header, footer
 src/*.html           Page bodies (index, support, 404)
-content/legal/*.md   Privacy Policy and Terms, copied from the backend repo — don't edit here
+content/i18n/*.json  All site text, one file per app language (en.json is the source; every key in every file)
+content/legal/*.md   Privacy Policy and Terms, copied from the backend repo — don't edit here (English only)
 assets/              Stylesheet, icons, app screenshots (light and dark)
 build.py             Static site builder (Python standard library only) → _site/
 scripts/sync.sh      Copies legal texts and screenshots from the sibling repos

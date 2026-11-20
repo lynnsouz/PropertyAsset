@@ -6,9 +6,13 @@
 
 Pages: src/index.html, src/support.html and src/404.html are wrapped in src/layout.html;
 content/legal/*.md (synced from the backend repo by scripts/sync.sh) become privacy.html and terms.html.
+Every page is built in each of the app's languages: English at the root, the others in /<code>/
+(e.g. /pt-br/support.html), with a language menu in the header. The legal texts stay in English.
 
-Placeholders in pages: {{base}}, {{app_store_button}}, {{contact}}, and {{shot:<name>:<alt text>}}
-for a screenshot in assets/images/screenshots/<name>-light.jpg / -dark.jpg.
+Text lives in content/i18n/<lang>.json; en.json is the source, and every language needs every key.
+Placeholders in pages: {{t:<key>}} (translated text), {{home}} (this language's root), {{base}}
+(the site root, for assets), {{app_store_button}}, {{contact}}, and {{shot:<name>:<alt key>}} for a
+screenshot in assets/images/screenshots/<name>-light.jpg / -dark.jpg.
 """
 import datetime
 import html
@@ -20,7 +24,6 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
 OUT = ROOT / "_site"
-LEGAL = {"privacy": "Privacy Policy", "terms": "Terms and Conditions"}
 
 
 # MARK: - Markdown (the subset the legal texts use)
@@ -101,93 +104,154 @@ def bullets(block: list[str]) -> str:
     return "<ul>" + "".join(f"<li>{inline(first)}{bullets(rest) if rest else ''}</li>" for first, *rest in items) + "</ul>"
 
 
+# MARK: - Languages
+
+# The app's languages. English is at the site root; the others in a folder named after the code.
+LANGUAGES = ["en", "pt-BR", "es", "fr", "de", "it", "sv", "da", "nb", "fi"]
+GLOBE = ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" '
+         'stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
+         '<path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg>')
+
+
+def folder(lang: str) -> str:
+    return "" if lang == "en" else lang.lower() + "/"
+
+
+def load_strings() -> dict[str, dict[str, str]]:
+    """Every language must have every English key, with the same HTML tags and placeholders."""
+    strings = {lang: json.loads((ROOT / "content" / "i18n" / f"{lang}.json").read_text(encoding="utf-8"))
+               for lang in LANGUAGES}
+    english = strings["en"]
+    shape = lambda text: sorted(re.findall(r"</?\w+|\{\{\w+\}\}", text))
+    for lang, table in strings.items():
+        missing = set(english) - set(table)
+        assert not missing, f"{lang}.json is missing {sorted(missing)}"
+        for key, text in english.items():
+            assert shape(text) == shape(table[key]), f"{lang}.json {key}: tags differ from English"
+    return strings
+
+
 # MARK: - Pages
 
 def screenshot(base: str, name: str, alt: str) -> str:
-    folder = f"{base}assets/images/screenshots"
+    path = f"{base}assets/images/screenshots"
     return (
         f'<div class="phone"><picture>'
-        f'<source srcset="{folder}/{name}-dark.jpg" media="(prefers-color-scheme: dark)">'
-        f'<img src="{folder}/{name}-light.jpg" alt="{html.escape(alt)}" width="719" height="1560" loading="lazy">'
+        f'<source srcset="{path}/{name}-dark.jpg" media="(prefers-color-scheme: dark)">'
+        f'<img src="{path}/{name}-light.jpg" alt="{html.escape(alt)}" width="719" height="1560" loading="lazy">'
         f"</picture></div>"
     )
 
 
-def fill(template: str, config: dict, base: str) -> str:
+def fill(template: str, config: dict, base: str, t: dict[str, str]) -> str:
     if config["app_store_url"]:
-        button = f'<a class="button" href="{html.escape(config["app_store_url"])}">Download on the App Store</a>'
+        button = f'<a class="button" href="{html.escape(config["app_store_url"])}">{t["app_store_download"]}</a>'
     else:
-        button = '<span class="button disabled" aria-disabled="true">Coming soon to the App Store</span>'
+        button = f'<span class="button disabled" aria-disabled="true">{t["app_store_soon"]}</span>'
     if config["support_email"]:
         email = html.escape(config["support_email"])
-        contact = (f'<div class="contact"><p><strong>Email:</strong> <a href="mailto:{email}">{email}</a></p>'
-                   "<p>We reply within two business days. Please include your app version (Workspace tab, at the bottom).</p></div>")
+        contact = (f'<div class="contact"><p><strong>{t["contact_email"]}</strong> <a href="mailto:{email}">{email}</a></p>'
+                   f'<p>{t["contact_reply"]}</p></div>')
     else:
-        contact = '<div class="contact"><p>A support email address will be listed here when the app launches.</p></div>'
-    template = re.sub(r"\{\{shot:([\w-]+):([^}]+)\}\}", lambda m: screenshot(base, m.group(1), m.group(2)), template)
-    return template.replace("{{base}}", base).replace("{{app_store_button}}", button).replace("{{contact}}", contact)
+        contact = f'<div class="contact"><p>{t["contact_soon"]}</p></div>'
+    template = re.sub(r"\{\{shot:([\w-]+):(\w+)\}\}", lambda m: screenshot(base, m.group(1), t[m.group(2)]), template)
+    return template.replace("{{app_store_button}}", button).replace("{{contact}}", contact)
 
 
-def navigation(base: str, current: str) -> str:
-    links = [("", "#features", "Features", "optional"), ("support.html", "support.html", "Support", ""),
-             ("privacy.html", "privacy.html", "Privacy", "")]
+def language_menu(base: str, lang: str, file: str, strings: dict) -> str:
+    """A disclosure menu (works without JavaScript) linking to this page in every language."""
+    target = "" if file in ("index.html", "404.html") else file
+    items = []
+    for other in sorted(LANGUAGES, key=lambda code: strings[code]["language_name"].casefold()):
+        current = ' aria-current="true"' if other == lang else ""
+        items.append(f'<li><a href="{base}{folder(other)}{target}" lang="{other}" hreflang="{other}"{current}>'
+                     f'{strings[other]["language_name"]}</a></li>')
+    label = html.escape(strings[lang]["language_menu"])
+    return (f'<details class="lang-menu"><summary aria-label="{label}: {strings[lang]["language_name"]}">{GLOBE}'
+            f'<span class="lang-code">{lang.split("-")[0].upper()}</span></summary>'
+            f'<ul aria-label="{label}">{"".join(items)}</ul></details>')
+
+
+def navigation(home: str, current: str, t: dict[str, str]) -> str:
+    links = [("", "#features", t["nav_features"], "optional"), ("support.html", "support.html", t["nav_support"], ""),
+             ("privacy.html", "privacy.html", t["nav_privacy"], "")]
     parts = []
     for page, href, label, css in links:
         attributes = f' class="{css}"' if css else ""
         if page and page == current:
             attributes += ' aria-current="page"'
-        parts.append(f'<a href="{base}{href}"{attributes}>{label}</a>')
+        parts.append(f'<a href="{home}{href}"{attributes}>{label}</a>')
     return "".join(parts)
 
 
-def legal_body(kind: str) -> str:
+def legal_body(kind: str, t: dict[str, str]) -> str:
     source = (ROOT / "content" / "legal" / f"{kind}.md").read_text(encoding="utf-8")
     body = re.sub(r"(<h1[^>]*>)Property Asset — ", r"\1", markdown(source), count=1)
     sections = re.findall(r'<h2 id="([^"]+)">(.+?)</h2>', body)
     toc = ""
     if len(sections) > 4:
         items = "".join(f'<li><a href="#{anchor}">{re.sub(r"^[0-9.]+ ", "", title)}</a></li>' for anchor, title in sections)
-        toc = f'<nav class="toc" aria-label="Contents"><strong>Contents</strong><ol>{items}</ol></nav>'
+        toc = f'<nav class="toc" aria-label="Contents" lang="en"><strong>Contents</strong><ol>{items}</ol></nav>'
     body = re.sub(r"(</h1>)", r"\1" + toc.replace("\\", "\\\\"), body, count=1) if toc else body
-    return f'<section class="page legal"><div class="wrap narrow">{body}</div></section>'
+    # The legal texts are English until translated versions are reviewed.
+    notice = f'<p class="notice">{t["legal_english_only"]}</p>' if t["legal_english_only"] else ""
+    return f'<section class="page legal"><div class="wrap narrow">{notice}<div lang="en">{body}</div></div></section>'
 
 
 def main() -> None:
     config = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
     base = "/" if "--local" in sys.argv else config["base_path"]
     layout = (ROOT / "src" / "layout.html").read_text(encoding="utf-8")
+    strings = load_strings()
 
-    pages: dict[str, tuple[str, str]] = {}  # output file → (title, body)
+    sources: dict[str, tuple[str, str]] = {}  # file → (title key, body template)
     for name in ("index", "support", "404"):
         source = (ROOT / "src" / f"{name}.html").read_text(encoding="utf-8")
-        title = re.match(r"<!-- title: (.+?) -->", source).group(1)
-        pages[f"{name}.html"] = (title, source.split("-->", 1)[1])
-    for kind, title in LEGAL.items():
-        pages[f"{kind}.html"] = (f"{title} · Property Asset", legal_body(kind))
+        title = re.match(r"<!-- title: (\w+) -->", source).group(1)
+        sources[f"{name}.html"] = (title, source.split("-->", 1)[1])
+    for kind in ("privacy", "terms"):
+        sources[f"{kind}.html"] = (f"legal_{kind}_title", "")
 
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(ROOT / "assets", OUT / "assets")
-    for file, (title, body) in pages.items():
-        canonical = config["base_url"] + ("" if file == "index.html" else file)
-        page = (layout.replace("{{body}}", fill(body.strip(), config, base))
-                .replace("{{nav}}", navigation(base, file))
-                .replace("{{title}}", html.escape(title))
-                .replace("{{description}}", html.escape(config["description"]))
-                .replace("{{canonical}}", canonical)
-                .replace("{{base_url}}", config["base_url"])
-                .replace("{{page_class}}", file.removesuffix(".html"))
-                .replace("{{year}}", str(datetime.date.today().year)))
-        page = page.replace("{{base}}", base)
-        assert "{{" not in page, f"{file}: unreplaced placeholder"
-        (OUT / file).write_text(page, encoding="utf-8")
+    written = []
+    for lang in LANGUAGES:
+        t, home = strings[lang], base + folder(lang)
+        for file, (title_key, body) in sources.items():
+            if file == "404.html" and lang != "en":
+                continue  # GitHub Pages only serves the root 404 page
+            if not body:
+                body = legal_body(file.removesuffix(".html"), t)
+            title = t[title_key] if file == "index.html" else f"{t[title_key]} · Property Asset"
+            path = "" if file == "index.html" else file
+            alternates = "\n".join(
+                f'<link rel="alternate" hreflang="{other}" href="{config["base_url"]}{folder(other)}{path}">'
+                for other in LANGUAGES) + f'\n<link rel="alternate" hreflang="x-default" href="{config["base_url"]}{path}">'
+            page = (layout.replace("{{body}}", fill(body.strip(), config, base, t))
+                    .replace("{{nav}}", navigation(home, file, t) + language_menu(base, lang, file, strings))
+                    .replace("{{alternates}}", "" if file == "404.html" else alternates)
+                    .replace("{{title}}", html.escape(re.sub(r"&nbsp;", " ", title)))
+                    .replace("{{description}}", html.escape(t["meta_description"]))
+                    .replace("{{canonical}}", config["base_url"] + folder(lang) + path)
+                    .replace("{{base_url}}", config["base_url"])
+                    .replace("{{page_class}}", file.removesuffix(".html"))
+                    .replace("{{lang}}", lang)
+                    .replace("{{year}}", str(datetime.date.today().year)))
+            page = re.sub(r"\{\{t:(\w+)\}\}", lambda m: t[m.group(1)], page)
+            page = page.replace("{{home}}", home).replace("{{base}}", base)
+            assert "{{" not in page, f"{lang}/{file}: unreplaced placeholder {re.search(r'{{[^}]*}}', page).group(0)}"
+            target = OUT / folder(lang) / file
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(page, encoding="utf-8")
+            if file != "404.html":
+                written.append(folder(lang) + path)
 
-    urls = "".join(f"<url><loc>{config['base_url']}{'' if f == 'index.html' else f}</loc></url>"
-                   for f in pages if f != "404.html")
+    urls = "".join(f"<url><loc>{config['base_url']}{path}</loc></url>" for path in written)
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {config['base_url']}sitemap.xml\n")
-    print(f"Built {OUT.name}/: {', '.join(pages)} (base {base})")
+    print(f"Built {OUT.name}/: {len(written) + 1} pages in {len(LANGUAGES)} languages (base {base})")
 
 
 if __name__ == "__main__":
