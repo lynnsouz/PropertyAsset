@@ -1,7 +1,7 @@
 # Property Asset — Website
 
 The public website for the Property Asset app: home page, support, Privacy Policy and Terms.
-Published with GitHub Pages at <https://lynnsouz.github.io/propertyasset/>.
+Published with GitHub Pages at <https://lynnsouz.github.io/PropertyAsset/>.
 
 The App Store listing links here for its **Privacy Policy URL** (`privacy.html`) and **Support URL**
 (`support.html`).
