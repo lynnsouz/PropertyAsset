@@ -47,6 +47,14 @@
   "cap_property": "Einheiten, Eigentümer und Verlauf für jede",
   "cap_transactions": "Einnahmen und Ausgaben, in jeder Währung",
 
+  "big_title": "Auch für den großen Bildschirm gemacht",
+  "big_lede": "Auf iPad und Mac nutzt Property Asset den zusätzlichen Platz. Deine Summen bleiben neben dem Diagramm im Blick, und die Buchungen stehen neben der Übersicht und allem, was auf Bestätigung wartet.",
+  "big_1": "Die Summen bleiben sichtbar, während du durch die Details scrollst",
+  "big_2": "Buchungen Monat für Monat, neben allem, was bestätigt werden muss",
+  "big_3": "Dieselben Daten auf iPhone, iPad und Mac, immer synchron",
+  "shot_ipad_dashboard": "Übersicht auf dem iPad: die Summen in einer Spalte neben dem Monatsdiagramm",
+  "shot_mac_transactions": "Buchungen auf dem Mac: links die Übersicht, rechts die Monate",
+
   "privacy_title": "Deine Daten bleiben deine",
   "privacy_1": "Keine Werbung, keine Tracker, keine Analysedienste von Dritten.",
   "privacy_2": "Gehostet in der Europäischen Union, verschlüsselt bei der Übertragung und gespeichert.",

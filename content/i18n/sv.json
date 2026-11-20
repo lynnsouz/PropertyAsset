@@ -47,6 +47,14 @@
   "cap_property": "Enheter, ägare och historik för varje fastighet",
   "cap_transactions": "Intäkter och kostnader, i valfri valuta",
 
+  "big_title": "Gjord för den stora skärmen också",
+  "big_lede": "På iPad och Mac använder Property Asset det extra utrymmet. Dina summor syns bredvid diagrammet, och transaktionerna visas bredvid sammanfattningen och det som väntar på bekräftelse.",
+  "big_1": "Summorna syns medan du bläddrar i detaljerna",
+  "big_2": "Transaktioner månad för månad, bredvid det som behöver bekräftas",
+  "big_3": "Samma data på iPhone, iPad och Mac, alltid synkat",
+  "shot_ipad_dashboard": "Översikt på iPad: summorna i en kolumn bredvid månadsdiagrammet",
+  "shot_mac_transactions": "Transaktioner på Mac: sammanfattningen till vänster, månaderna till höger",
+
   "privacy_title": "Dina data förblir dina",
   "privacy_1": "Inga annonser, inga spårare, ingen analys från tredje part.",
   "privacy_2": "Lagras inom Europeiska unionen, krypterat både under överföring och i vila.",

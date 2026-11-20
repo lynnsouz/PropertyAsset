@@ -47,6 +47,14 @@
   "cap_property": "Lots, propriétaires et historique pour chacun",
   "cap_transactions": "Revenus et dépenses, dans toutes les devises",
 
+  "big_title": "Pensé aussi pour les grands écrans",
+  "big_lede": "Sur iPad et Mac, Property Asset profite de l'espace en plus. Vos totaux restent visibles à côté du graphique, et les transactions s'affichent à côté du résumé et de ce qui attend une confirmation.",
+  "big_1": "Les totaux restent visibles pendant que vous parcourez le détail",
+  "big_2": "Les transactions mois par mois, à côté de ce qui reste à confirmer",
+  "big_3": "Les mêmes données sur iPhone, iPad et Mac, toujours synchronisées",
+  "shot_ipad_dashboard": "Tableau de bord sur iPad : les totaux dans une colonne à côté du graphique mensuel",
+  "shot_mac_transactions": "Transactions sur Mac : le résumé à gauche, les mois à droite",
+
   "privacy_title": "Vos données restent les vôtres",
   "privacy_1": "Pas de publicité, pas de traceurs, pas d’analyse par des tiers.",
   "privacy_2": "Hébergé dans l’Union européenne, chiffré en transit et au repos.",

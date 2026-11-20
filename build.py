@@ -12,7 +12,8 @@ Every page is built in each of the app's languages: English at the root, the oth
 Text lives in content/i18n/<lang>.json; en.json is the source, and every language needs every key.
 Placeholders in pages: {{t:<key>}} (translated text), {{home}} (this language's root), {{base}}
 (the site root, for assets), {{app_store_button}}, {{contact}}, and {{shot:<name>:<alt key>}} for a
-screenshot in assets/images/screenshots/<name>-light.jpg / -dark.jpg.
+screenshot in assets/images/screenshots/<name>-light.jpg / -dark.jpg (iPhone frame). {{ipad:…}} and
+{{mac:…}} take the same arguments for a landscape iPad capture, in an iPad frame or a Mac window.
 """
 import datetime
 import html
@@ -143,6 +144,27 @@ def screenshot(base: str, name: str, alt: str) -> str:
     )
 
 
+def picture(base: str, name: str, alt: str, width: int, height: int) -> str:
+    path = f"{base}assets/images/screenshots"
+    return (
+        f'<picture><source srcset="{path}/{name}-dark.jpg" media="(prefers-color-scheme: dark)">'
+        f'<img src="{path}/{name}-light.jpg" alt="{html.escape(alt)}" width="{width}" height="{height}" loading="lazy">'
+        f"</picture>"
+    )
+
+
+def ipad(base: str, name: str, alt: str) -> str:
+    return f'<div class="ipad">{picture(base, name, alt, 1600, 1103)}</div>'
+
+
+def mac(base: str, name: str, alt: str) -> str:
+    """A Mac window around an iPad capture; the Mac shows the app without the iPad status bar, so it's cropped."""
+    return (
+        '<div class="mac"><div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>Property Asset</span></div>'
+        f'<div class="mac-screen">{picture(base, name, alt, 1600, 1103)}</div></div>'
+    )
+
+
 def fill(template: str, config: dict, base: str, t: dict[str, str]) -> str:
     if config["app_store_url"]:
         button = f'<a class="button" href="{html.escape(config["app_store_url"])}">{t["app_store_download"]}</a>'
@@ -155,6 +177,8 @@ def fill(template: str, config: dict, base: str, t: dict[str, str]) -> str:
     else:
         contact = f'<div class="contact"><p>{t["contact_soon"]}</p></div>'
     template = re.sub(r"\{\{shot:([\w-]+):(\w+)\}\}", lambda m: screenshot(base, m.group(1), t[m.group(2)]), template)
+    template = re.sub(r"\{\{ipad:([\w-]+):(\w+)\}\}", lambda m: ipad(base, m.group(1), t[m.group(2)]), template)
+    template = re.sub(r"\{\{mac:([\w-]+):(\w+)\}\}", lambda m: mac(base, m.group(1), t[m.group(2)]), template)
     return template.replace("{{app_store_button}}", button).replace("{{contact}}", contact)
 
 

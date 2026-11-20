@@ -47,6 +47,14 @@
   "cap_property": "Huoneistot, omistajat ja historia kullekin",
   "cap_transactions": "Tulot ja menot millä tahansa valuutalla",
 
+  "big_title": "Tehty myös isolle näytölle",
+  "big_lede": "iPadilla ja Macilla Property Asset käyttää lisätilan hyväksi. Summat pysyvät näkyvissä kaavion vieressä, ja tapahtumat näkyvät yhteenvedon ja vahvistusta odottavien kohteiden vieressä.",
+  "big_1": "Summat pysyvät näkyvissä, kun selaat yksityiskohtia",
+  "big_2": "Tapahtumat kuukausittain, vahvistettavien kohteiden vieressä",
+  "big_3": "Samat tiedot iPhonessa, iPadissa ja Macissa, aina synkronoituna",
+  "shot_ipad_dashboard": "Yleisnäkymä iPadilla: summat sarakkeessa kuukausikaavion vieressä",
+  "shot_mac_transactions": "Tapahtumat Macilla: yhteenveto vasemmalla, kuukaudet oikealla",
+
   "privacy_title": "Tietosi pysyvät sinun",
   "privacy_1": "Ei mainoksia, ei seurantaa, ei kolmansien osapuolten analytiikkaa.",
   "privacy_2": "Palvelimet Euroopan unionissa, salattu siirron aikana ja tallennettuna.",

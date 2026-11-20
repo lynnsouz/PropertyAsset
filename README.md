@@ -29,7 +29,8 @@ Pushing to `main` builds and deploys (`.github/workflows/pages.yml`).
 
 **Updating legal texts or screenshots.** Edit the legal texts in the backend repo
 (`legal/*.md`, then `scripts/publish-legal.sh` so the app asks users to accept them), capture new
-screenshots with `mise run screenshots` in the app repo, then here run `scripts/sync.sh`, commit
+screenshots with `mise run screenshots` in the app repo (iPad: `mise exec -- scripts/screenshots.sh
+"platform=iOS Simulator,name=iPad Pro 11 (M4),OS=18.1"`), then here run `scripts/sync.sh`, commit
 and push. The website and the app then show the same text.
 
 **At launch.** Set `support_email` and `app_store_url` in `site.json`; the support page and the

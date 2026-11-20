@@ -16,8 +16,10 @@ if compgen -G "$APP/build/screenshots/*.png" >/dev/null; then
   rm -f assets/images/screenshots/*
   for png in "$APP"/build/screenshots/*.png; do
     name="$(basename "${png%.png}")"
-    # 720 px wide JPEG: sharp on retina at the size the site shows it, ~100 KB each.
-    sips -Z 1560 -s format jpeg -s formatOptions 80 "$png" --out "assets/images/screenshots/$name.jpg" >/dev/null
+    # iPhone: 720 px wide JPEG, sharp on retina at the size the site shows it, ~100 KB each.
+    # iPad (landscape): 1600 px wide, for the larger frame.
+    size=1560; [[ "$name" == ipad-* ]] && size=1600
+    sips -Z "$size" -s format jpeg -s formatOptions 80 "$png" --out "assets/images/screenshots/$name.jpg" >/dev/null
   done
   echo "✓ Screenshots copied from $APP/build/screenshots"
 else

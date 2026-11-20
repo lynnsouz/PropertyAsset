@@ -47,6 +47,14 @@
   "cap_property": "Unità, proprietari e cronologia di ciascuno",
   "cap_transactions": "Entrate e spese, in qualsiasi valuta",
 
+  "big_title": "Pensato anche per lo schermo grande",
+  "big_lede": "Su iPad e Mac, Property Asset sfrutta lo spazio in più. I totali restano in vista accanto al grafico, e le transazioni stanno accanto al riepilogo e a ciò che attende conferma.",
+  "big_1": "I totali restano in vista mentre scorri i dettagli",
+  "big_2": "Transazioni mese per mese, accanto a ciò che va confermato",
+  "big_3": "Gli stessi dati su iPhone, iPad e Mac, sempre sincronizzati",
+  "shot_ipad_dashboard": "Dashboard su iPad: i totali in una colonna accanto al grafico mensile",
+  "shot_mac_transactions": "Transazioni su Mac: il riepilogo a sinistra, i mesi a destra",
+
   "privacy_title": "I tuoi dati restano tuoi",
   "privacy_1": "Niente pubblicità, niente tracker, niente analisi di terze parti.",
   "privacy_2": "Ospitato nell’Unione europea, cifrato in transito e a riposo.",

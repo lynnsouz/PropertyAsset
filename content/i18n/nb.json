@@ -47,6 +47,14 @@
   "cap_property": "Enheter, eiere og historikk for hver av dem",
   "cap_transactions": "Inntekter og utgifter, i alle valutaer",
 
+  "big_title": "Laget for den store skjermen også",
+  "big_lede": "På iPad og Mac bruker Property Asset den ekstra plassen. Totalene dine er synlige ved siden av diagrammet, og transaksjonene står ved siden av oversikten og det som venter på bekreftelse.",
+  "big_1": "Totalene er synlige mens du blar i detaljene",
+  "big_2": "Transaksjoner måned for måned, ved siden av det som må bekreftes",
+  "big_3": "De samme dataene på iPhone, iPad og Mac, alltid synkronisert",
+  "shot_ipad_dashboard": "Oversikt på iPad: totalene i en kolonne ved siden av månedsdiagrammet",
+  "shot_mac_transactions": "Transaksjoner på Mac: oversikten til venstre, månedene til høyre",
+
   "privacy_title": "Dataene dine forblir dine",
   "privacy_1": "Ingen reklame, ingen sporing, ingen analyse fra tredjeparter.",
   "privacy_2": "Driftet i EU, kryptert under overføring og ved lagring.",
