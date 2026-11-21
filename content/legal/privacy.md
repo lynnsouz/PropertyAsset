@@ -21,6 +21,7 @@ Contact: [PRIVACY CONTACT EMAIL] · [REGISTERED BUSINESS ADDRESS]
 | **Account data** | Email address, display name, password (stored only as a secure hash), sign-in method, accepted versions of the Terms and this Policy | You |
 | **Workspace content** | Properties, units, owners and ownership shares, transactions, recurring schedules, categories, exchange rates, reports | You and other Members |
 | **Documents** | Files you upload (contracts, invoices, photos) and their names | You and other Members |
+| **Tenants** | Names of tenants (people or companies) and, if entered, their email address, phone number, contact person and notes; tenancies (which property or unit, dates) with the rent and deposits linked to them. Contact details and notes are visible only to Members with the Editor role or above | You and other Members |
 | **Collaboration data** | Workspace memberships and roles, invitations (including invitees' email addresses), invite codes, the Workspace activity history | You and other Members |
 | **Technical data** | Sign-in sessions, IP address and request logs kept by our hosting provider for security and troubleshooting | Your device |
 | **Diagnostics** | Anonymous crash and performance reports, only if you allow sharing analytics with app developers in your device settings; Apple provides them to us without identifying you | Apple |
@@ -61,6 +62,7 @@ Our main hosting is in the European Union. Where a provider processes data outsi
 |---|---|
 | Account data | Until you delete your Account |
 | Workspace content and documents | Until deleted by a Member; deleted items stay in Recently Deleted for **30 days** and are then removed permanently |
+| Tenants and tenancies | Until deleted by a Member (removed immediately), or with their property or Workspace |
 | Workspaces you own alone | Deleted together with your Account |
 | Activity history | For the life of the Workspace; after your Account is deleted, entries keep the name shown at the time |
 | Request and security logs | [LOG RETENTION, e.g. up to 90 days] |
