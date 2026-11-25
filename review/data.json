@@ -1,0 +1,1878 @@
+{
+ "repo": "lynnsouz/PropertyAsset",
+ "languages": [
+  {
+   "code": "ar",
+   "native": "العربية",
+   "name": "Arabic",
+   "dir": "rtl",
+   "site": "https://lynnsouz.github.io/PropertyAsset/ar/",
+   "items": [
+    {
+     "id": "eebb95a1a0",
+     "group": "term",
+     "where": "App",
+     "key": "Properties",
+     "english": "Properties",
+     "current": "العقارات",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7000c8e17f",
+     "group": "term",
+     "where": "App",
+     "key": "Transactions",
+     "english": "Transactions",
+     "current": "المعاملات",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "0b28c7d393",
+     "group": "term",
+     "where": "App",
+     "key": "Dashboard",
+     "english": "Dashboard",
+     "current": "لوحة المعلومات",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "91e7d6cbca",
+     "group": "term",
+     "where": "App",
+     "key": "Workspace",
+     "english": "Workspace",
+     "current": "مساحة العمل",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "a8fef08b2c",
+     "group": "term",
+     "where": "App",
+     "key": "Tenants",
+     "english": "Tenants",
+     "current": "المستأجرون",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7ed33af8a1",
+     "group": "term",
+     "where": "App",
+     "key": "Recurring item",
+     "english": "Recurring item",
+     "current": "بند متكرر",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "97e3efbf41",
+     "group": "term",
+     "where": "App",
+     "key": "Security deposit",
+     "english": "Security deposit",
+     "current": "مبلغ التأمين",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4c1a17ec4b",
+     "group": "term",
+     "where": "App",
+     "key": "Waiting for confirmation",
+     "english": "Waiting for confirmation",
+     "current": "بانتظار التأكيد",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e7b744e73c",
+     "group": "term",
+     "where": "App",
+     "key": "Recently Deleted",
+     "english": "Recently Deleted",
+     "current": "المحذوفة مؤخرًا",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "term",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "المالك",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "b314cf407e",
+     "group": "term",
+     "where": "App",
+     "key": "Admin",
+     "english": "Admin",
+     "current": "مسؤول",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4a041bee2e",
+     "group": "term",
+     "where": "App",
+     "key": "Editor",
+     "english": "Editor",
+     "current": "محرر",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "term",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "مشاهد",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "2391dbb1a9",
+     "group": "check",
+     "where": "App",
+     "key": "Every cent, in any currency",
+     "english": "Every cent, in any currency",
+     "current": "كل قرش، بأي عملة",
+     "note": "Idiom. It should read naturally and not tie the app to one currency.",
+     "plural": false
+    },
+    {
+     "id": "03beb5bd7b",
+     "group": "check",
+     "where": "Website",
+     "key": "hero_title",
+     "english": "Every property, every owner, every cent. In one place.",
+     "current": "كل عقار، وكل مالك، وكل قرش. في مكان واحد.",
+     "note": "The website's headline: the same idiom.",
+     "plural": false
+    },
+    {
+     "id": "7942babf71",
+     "group": "check",
+     "where": "Website",
+     "key": "legal_english_only",
+     "english": "",
+     "current": "هذا المستند متوفر باللغة الإنجليزية فقط في الوقت الحالي.",
+     "note": "Notice shown above the Privacy Policy and Terms, which are in English only.",
+     "plural": false
+    },
+    {
+     "id": "67f5e907c1",
+     "group": "check",
+     "where": "App",
+     "key": "Deleted %@ of %@ on %@ (%@)",
+     "english": "Deleted %@ of %@ on %@ (%@)",
+     "current": "حُذف %1$@ بمبلغ %2$@ بتاريخ %3$@ (%4$@)",
+     "note": "Activity history. The placeholders are, in order: income or expense, the amount, the date, the property.",
+     "plural": false
+    },
+    {
+     "id": "9be39baa5d",
+     "group": "check",
+     "where": "App",
+     "key": "Spaces",
+     "english": "Spaces",
+     "current": "الأماكن",
+     "note": "A rentable part of a property. Translated as “place” to keep it apart from the workspace. Clear?",
+     "plural": false
+    },
+    {
+     "id": "8f285ab458",
+     "group": "check",
+     "where": "App",
+     "key": "HOA & condo fees",
+     "english": "HOA & condo fees",
+     "current": "رسوم اتحاد الملاك",
+     "note": "Owners' association fees. Is this the usual term?",
+     "plural": false
+    },
+    {
+     "id": "8d3bab6201",
+     "group": "check",
+     "where": "App",
+     "key": "%lld bd",
+     "english": "%lld bd",
+     "current": "%lld غرفة نوم",
+     "note": "Short bedroom label on property cards; it should stay short.",
+     "plural": false
+    },
+    {
+     "id": "4c28e0724d",
+     "group": "check",
+     "where": "App",
+     "key": "%@ ba",
+     "english": "%@ ba",
+     "current": "%@ حمّام",
+     "note": "Short bathroom label on property cards; it should stay short.",
+     "plural": false
+    },
+    {
+     "id": "788c947bf3",
+     "group": "check",
+     "where": "App",
+     "key": "%lld joined",
+     "english": "%lld joined",
+     "current": "zero: انضمّ: %lld\none: انضمّ: %lld\ntwo: انضمّ: %lld\nfew: انضمّ: %lld\nmany: انضمّ: %lld\nother: انضمّ: %lld",
+     "note": "Same text for every number (“Joined: 3”). Fine for all counts?",
+     "plural": true
+    },
+    {
+     "id": "51cb7fc50d",
+     "group": "check",
+     "where": "App",
+     "key": "%lld units",
+     "english": "%lld units",
+     "current": "zero: لا توجد وحدات\none: وحدة واحدة\ntwo: وحدتان\nfew: %lld وحدات\nmany: %lld وحدة\nother: %lld وحدة",
+     "note": "Zero, one and two are written in words. Check each form.",
+     "plural": true
+    },
+    {
+     "id": "8e5876720d",
+     "group": "check",
+     "where": "App",
+     "key": "1 %@ in %@",
+     "english": "1 %@ in %@",
+     "current": "1 %1$@ بعملة %2$@",
+     "note": "Exchange-rate label, e.g. “1 USD in EUR”.",
+     "plural": false
+    },
+    {
+     "id": "9402325ba2",
+     "group": "check",
+     "where": "App",
+     "key": "e.g. Harbor Lofts",
+     "english": "e.g. Harbor Lofts",
+     "current": "مثال: شقق المرفأ",
+     "note": "Example name in a form field, localized rather than kept in English.",
+     "plural": false
+    }
+   ]
+  },
+  {
+   "code": "zh-Hans",
+   "native": "简体中文",
+   "name": "Chinese (Simplified)",
+   "dir": "ltr",
+   "site": "https://lynnsouz.github.io/PropertyAsset/zh-hans/",
+   "items": [
+    {
+     "id": "eebb95a1a0",
+     "group": "term",
+     "where": "App",
+     "key": "Properties",
+     "english": "Properties",
+     "current": "房产",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7000c8e17f",
+     "group": "term",
+     "where": "App",
+     "key": "Transactions",
+     "english": "Transactions",
+     "current": "交易",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "0b28c7d393",
+     "group": "term",
+     "where": "App",
+     "key": "Dashboard",
+     "english": "Dashboard",
+     "current": "仪表板",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "91e7d6cbca",
+     "group": "term",
+     "where": "App",
+     "key": "Workspace",
+     "english": "Workspace",
+     "current": "工作区",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "a8fef08b2c",
+     "group": "term",
+     "where": "App",
+     "key": "Tenants",
+     "english": "Tenants",
+     "current": "租客",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7ed33af8a1",
+     "group": "term",
+     "where": "App",
+     "key": "Recurring item",
+     "english": "Recurring item",
+     "current": "定期项目",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "97e3efbf41",
+     "group": "term",
+     "where": "App",
+     "key": "Security deposit",
+     "english": "Security deposit",
+     "current": "押金",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4c1a17ec4b",
+     "group": "term",
+     "where": "App",
+     "key": "Waiting for confirmation",
+     "english": "Waiting for confirmation",
+     "current": "待确认",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e7b744e73c",
+     "group": "term",
+     "where": "App",
+     "key": "Recently Deleted",
+     "english": "Recently Deleted",
+     "current": "最近删除",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "term",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "所有者",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "b314cf407e",
+     "group": "term",
+     "where": "App",
+     "key": "Admin",
+     "english": "Admin",
+     "current": "管理员",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4a041bee2e",
+     "group": "term",
+     "where": "App",
+     "key": "Editor",
+     "english": "Editor",
+     "current": "编辑者",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "term",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "查看者",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "2391dbb1a9",
+     "group": "check",
+     "where": "App",
+     "key": "Every cent, in any currency",
+     "english": "Every cent, in any currency",
+     "current": "每一分钱，任意货币",
+     "note": "Idiom. It should read naturally and not tie the app to one currency.",
+     "plural": false
+    },
+    {
+     "id": "03beb5bd7b",
+     "group": "check",
+     "where": "Website",
+     "key": "hero_title",
+     "english": "Every property, every owner, every cent. In one place.",
+     "current": "每一处房产、每一位业主、每一分钱，尽在一处。",
+     "note": "The website's headline: the same idiom.",
+     "plural": false
+    },
+    {
+     "id": "7942babf71",
+     "group": "check",
+     "where": "Website",
+     "key": "legal_english_only",
+     "english": "",
+     "current": "本文档目前仅提供英文版本。",
+     "note": "Notice shown above the Privacy Policy and Terms, which are in English only.",
+     "plural": false
+    },
+    {
+     "id": "67f5e907c1",
+     "group": "check",
+     "where": "App",
+     "key": "Deleted %@ of %@ on %@ (%@)",
+     "english": "Deleted %@ of %@ on %@ (%@)",
+     "current": "已删除 %3$@ 的%1$@，金额 %2$@（%4$@）",
+     "note": "Activity history. The placeholders are, in order: income or expense, the amount, the date, the property.",
+     "plural": false
+    },
+    {
+     "id": "935e3ac726",
+     "group": "check",
+     "where": "App",
+     "key": "%@ a year on %@",
+     "english": "%@ a year on %@",
+     "current": "按 %2$@ 计，每年 %1$@",
+     "note": "Yield, e.g. “5% a year on $300,000”. Natural?",
+     "plural": false
+    },
+    {
+     "id": "8e5876720d",
+     "group": "check",
+     "where": "App",
+     "key": "1 %@ in %@",
+     "english": "1 %@ in %@",
+     "current": "1 %1$@ 兑 %2$@",
+     "note": "Exchange-rate label, e.g. “1 USD in EUR”.",
+     "plural": false
+    },
+    {
+     "id": "4120539f61",
+     "group": "check",
+     "where": "App",
+     "key": "Rents",
+     "english": "Rents",
+     "current": "租用",
+     "note": "On a tenant's page: what the tenant rents.",
+     "plural": false
+    },
+    {
+     "id": "9be39baa5d",
+     "group": "check",
+     "where": "App",
+     "key": "Spaces",
+     "english": "Spaces",
+     "current": "房源",
+     "note": "Rentable parts of a property (rooms, units).",
+     "plural": false
+    },
+    {
+     "id": "512db705e4",
+     "group": "check",
+     "where": "App",
+     "key": "Open",
+     "english": "Open",
+     "current": "待处理",
+     "note": "Status of a maintenance request that hasn't started.",
+     "plural": false
+    },
+    {
+     "id": "8454ce4a10",
+     "group": "check",
+     "where": "App",
+     "key": "In %@ · Out %@",
+     "english": "In %@ · Out %@",
+     "current": "收入 %1$@ · 支出 %2$@",
+     "note": "Money in and money out for a period.",
+     "plural": false
+    },
+    {
+     "id": "ad3377f97d",
+     "group": "check",
+     "where": "App",
+     "key": "Every",
+     "english": "Every",
+     "current": "每",
+     "note": "Label of the picker for how often something repeats.",
+     "plural": false
+    },
+    {
+     "id": "07ce6cfb80",
+     "group": "check",
+     "where": "App",
+     "key": "Messages",
+     "english": "Messages",
+     "current": "沟通记录",
+     "note": "Log of what was said to or by a tenant.",
+     "plural": false
+    },
+    {
+     "id": "8d3bab6201",
+     "group": "check",
+     "where": "App",
+     "key": "%lld bd",
+     "english": "%lld bd",
+     "current": "%lld 室",
+     "note": "Short bedroom label.",
+     "plural": false
+    },
+    {
+     "id": "4c28e0724d",
+     "group": "check",
+     "where": "App",
+     "key": "%@ ba",
+     "english": "%@ ba",
+     "current": "%@ 卫",
+     "note": "Short bathroom label.",
+     "plural": false
+    }
+   ]
+  },
+  {
+   "code": "hi",
+   "native": "हिन्दी",
+   "name": "Hindi",
+   "dir": "ltr",
+   "site": "https://lynnsouz.github.io/PropertyAsset/hi/",
+   "items": [
+    {
+     "id": "eebb95a1a0",
+     "group": "term",
+     "where": "App",
+     "key": "Properties",
+     "english": "Properties",
+     "current": "संपत्तियाँ",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7000c8e17f",
+     "group": "term",
+     "where": "App",
+     "key": "Transactions",
+     "english": "Transactions",
+     "current": "लेन-देन",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "0b28c7d393",
+     "group": "term",
+     "where": "App",
+     "key": "Dashboard",
+     "english": "Dashboard",
+     "current": "डैशबोर्ड",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "91e7d6cbca",
+     "group": "term",
+     "where": "App",
+     "key": "Workspace",
+     "english": "Workspace",
+     "current": "वर्कस्पेस",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "a8fef08b2c",
+     "group": "term",
+     "where": "App",
+     "key": "Tenants",
+     "english": "Tenants",
+     "current": "किरायेदार",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7ed33af8a1",
+     "group": "term",
+     "where": "App",
+     "key": "Recurring item",
+     "english": "Recurring item",
+     "current": "आवर्ती आइटम",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "97e3efbf41",
+     "group": "term",
+     "where": "App",
+     "key": "Security deposit",
+     "english": "Security deposit",
+     "current": "सिक्योरिटी डिपॉज़िट",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4c1a17ec4b",
+     "group": "term",
+     "where": "App",
+     "key": "Waiting for confirmation",
+     "english": "Waiting for confirmation",
+     "current": "पुष्टि की प्रतीक्षा में",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e7b744e73c",
+     "group": "term",
+     "where": "App",
+     "key": "Recently Deleted",
+     "english": "Recently Deleted",
+     "current": "हाल ही में डिलीट किए गए",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "term",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "ओनर",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "b314cf407e",
+     "group": "term",
+     "where": "App",
+     "key": "Admin",
+     "english": "Admin",
+     "current": "एडमिन",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4a041bee2e",
+     "group": "term",
+     "where": "App",
+     "key": "Editor",
+     "english": "Editor",
+     "current": "एडिटर",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "term",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "व्यूअर",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "2391dbb1a9",
+     "group": "check",
+     "where": "App",
+     "key": "Every cent, in any currency",
+     "english": "Every cent, in any currency",
+     "current": "हर पैसा, किसी भी मुद्रा में",
+     "note": "Idiom. It should read naturally and not tie the app to one currency.",
+     "plural": false
+    },
+    {
+     "id": "03beb5bd7b",
+     "group": "check",
+     "where": "Website",
+     "key": "hero_title",
+     "english": "Every property, every owner, every cent. In one place.",
+     "current": "हर संपत्ति, हर मालिक, हर पैसा। एक ही जगह।",
+     "note": "The website's headline: the same idiom.",
+     "plural": false
+    },
+    {
+     "id": "7942babf71",
+     "group": "check",
+     "where": "Website",
+     "key": "legal_english_only",
+     "english": "",
+     "current": "यह दस्तावेज़ केवल अंग्रेज़ी में उपलब्ध है।",
+     "note": "Notice shown above the Privacy Policy and Terms, which are in English only.",
+     "plural": false
+    },
+    {
+     "id": "67f5e907c1",
+     "group": "check",
+     "where": "App",
+     "key": "Deleted %@ of %@ on %@ (%@)",
+     "english": "Deleted %@ of %@ on %@ (%@)",
+     "current": "डिलीट किया गया: %2$@ का %1$@, %3$@ (%4$@)",
+     "note": "Activity history. The placeholders are, in order: income or expense, the amount, the date, the property.",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "check",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "ओनर",
+     "note": "Roles use English loanwords (ओनर, एडमिन, एडिटर, व्यूअर); co-owners of a property are मालिक. Is the difference clear?",
+     "plural": false
+    },
+    {
+     "id": "8f285ab458",
+     "group": "check",
+     "where": "App",
+     "key": "HOA & condo fees",
+     "english": "HOA & condo fees",
+     "current": "सोसाइटी और मेंटेनेंस शुल्क",
+     "note": "Adapted to Indian usage (society and maintenance charges).",
+     "plural": false
+    },
+    {
+     "id": "8af9ca4964",
+     "group": "check",
+     "where": "App",
+     "key": "Mortgage",
+     "english": "Mortgage",
+     "current": "होम लोन",
+     "note": "Translated as “home loan”.",
+     "plural": false
+    },
+    {
+     "id": "651770a864",
+     "group": "check",
+     "where": "App",
+     "key": "Utilities",
+     "english": "Utilities",
+     "current": "यूटिलिटी बिल",
+     "note": "Kept as “utility bill”.",
+     "plural": false
+    },
+    {
+     "id": "7d67a18a50",
+     "group": "check",
+     "where": "App",
+     "key": "Vacation",
+     "english": "Vacation",
+     "current": "हॉलिडे होम",
+     "note": "Name of a property icon: holiday home.",
+     "plural": false
+    },
+    {
+     "id": "c8fcc0bb08",
+     "group": "check",
+     "where": "App",
+     "key": "Landmark",
+     "english": "Landmark",
+     "current": "स्मारक",
+     "note": "Name of a property icon: a historic or notable building. Translated as “monument”.",
+     "plural": false
+    },
+    {
+     "id": "8454ce4a10",
+     "group": "check",
+     "where": "App",
+     "key": "In %@ · Out %@",
+     "english": "In %@ · Out %@",
+     "current": "आय %1$@ · खर्च %2$@",
+     "note": "Money in and money out for a period.",
+     "plural": false
+    },
+    {
+     "id": "4120539f61",
+     "group": "check",
+     "where": "App",
+     "key": "Rents",
+     "english": "Rents",
+     "current": "किराये पर",
+     "note": "On a tenant's page: what the tenant rents.",
+     "plural": false
+    },
+    {
+     "id": "9402325ba2",
+     "group": "check",
+     "where": "App",
+     "key": "e.g. Harbor Lofts",
+     "english": "e.g. Harbor Lofts",
+     "current": "जैसे सनशाइन अपार्टमेंट्स",
+     "note": "Example name in a form field, localized.",
+     "plural": false
+    }
+   ]
+  },
+  {
+   "code": "bn",
+   "native": "বাংলা",
+   "name": "Bengali",
+   "dir": "ltr",
+   "site": "https://lynnsouz.github.io/PropertyAsset/bn/",
+   "items": [
+    {
+     "id": "eebb95a1a0",
+     "group": "term",
+     "where": "App",
+     "key": "Properties",
+     "english": "Properties",
+     "current": "সম্পত্তি",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7000c8e17f",
+     "group": "term",
+     "where": "App",
+     "key": "Transactions",
+     "english": "Transactions",
+     "current": "লেনদেন",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "0b28c7d393",
+     "group": "term",
+     "where": "App",
+     "key": "Dashboard",
+     "english": "Dashboard",
+     "current": "ড্যাশবোর্ড",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "91e7d6cbca",
+     "group": "term",
+     "where": "App",
+     "key": "Workspace",
+     "english": "Workspace",
+     "current": "ওয়ার্কস্পেস",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "a8fef08b2c",
+     "group": "term",
+     "where": "App",
+     "key": "Tenants",
+     "english": "Tenants",
+     "current": "ভাড়াটিয়া",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7ed33af8a1",
+     "group": "term",
+     "where": "App",
+     "key": "Recurring item",
+     "english": "Recurring item",
+     "current": "পুনরাবৃত্ত আইটেম",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "97e3efbf41",
+     "group": "term",
+     "where": "App",
+     "key": "Security deposit",
+     "english": "Security deposit",
+     "current": "জামানত",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4c1a17ec4b",
+     "group": "term",
+     "where": "App",
+     "key": "Waiting for confirmation",
+     "english": "Waiting for confirmation",
+     "current": "নিশ্চিতকরণের অপেক্ষায়",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e7b744e73c",
+     "group": "term",
+     "where": "App",
+     "key": "Recently Deleted",
+     "english": "Recently Deleted",
+     "current": "সম্প্রতি মুছে ফেলা",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "term",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "মালিক",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "b314cf407e",
+     "group": "term",
+     "where": "App",
+     "key": "Admin",
+     "english": "Admin",
+     "current": "অ্যাডমিন",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4a041bee2e",
+     "group": "term",
+     "where": "App",
+     "key": "Editor",
+     "english": "Editor",
+     "current": "এডিটর",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "term",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "ভিউয়ার",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "2391dbb1a9",
+     "group": "check",
+     "where": "App",
+     "key": "Every cent, in any currency",
+     "english": "Every cent, in any currency",
+     "current": "প্রতিটি পয়সা, যেকোনো মুদ্রায়",
+     "note": "Idiom. It should read naturally and not tie the app to one currency.",
+     "plural": false
+    },
+    {
+     "id": "03beb5bd7b",
+     "group": "check",
+     "where": "Website",
+     "key": "hero_title",
+     "english": "Every property, every owner, every cent. In one place.",
+     "current": "প্রতিটি সম্পত্তি, প্রত্যেক মালিক, প্রতিটি পয়সা। এক জায়গায়।",
+     "note": "The website's headline: the same idiom.",
+     "plural": false
+    },
+    {
+     "id": "7942babf71",
+     "group": "check",
+     "where": "Website",
+     "key": "legal_english_only",
+     "english": "",
+     "current": "এই নথিটি আপাতত শুধু ইংরেজিতে পাওয়া যাচ্ছে।",
+     "note": "Notice shown above the Privacy Policy and Terms, which are in English only.",
+     "plural": false
+    },
+    {
+     "id": "67f5e907c1",
+     "group": "check",
+     "where": "App",
+     "key": "Deleted %@ of %@ on %@ (%@)",
+     "english": "Deleted %@ of %@ on %@ (%@)",
+     "current": "%3$@ তারিখের %2$@ পরিমাণের %1$@ মুছে ফেলা হয়েছে (%4$@)",
+     "note": "Activity history. The placeholders are, in order: income or expense, the amount, the date, the property.",
+     "plural": false
+    },
+    {
+     "id": "1233954ab6",
+     "group": "check",
+     "where": "App",
+     "key": "Reimbursement",
+     "english": "Reimbursement",
+     "current": "প্রতিপূরণ",
+     "note": "Fairly formal word; “খরচ ফেরত” would be plainer. Which is better?",
+     "plural": false
+    },
+    {
+     "id": "8454ce4a10",
+     "group": "check",
+     "where": "App",
+     "key": "In %@ · Out %@",
+     "english": "In %@ · Out %@",
+     "current": "জমা %1$@ · খরচ %2$@",
+     "note": "Money in and money out for a period.",
+     "plural": false
+    },
+    {
+     "id": "8b1cf200db",
+     "group": "check",
+     "where": "App",
+     "key": "Yield",
+     "english": "Yield",
+     "current": "রিটার্ন",
+     "note": "Yearly return on a property's value.",
+     "plural": false
+    },
+    {
+     "id": "8f285ab458",
+     "group": "check",
+     "where": "App",
+     "key": "HOA & condo fees",
+     "english": "HOA & condo fees",
+     "current": "সোসাইটি ও কনডো ফি",
+     "note": "Society and condo fees.",
+     "plural": false
+    },
+    {
+     "id": "ef69a88b01",
+     "group": "check",
+     "where": "App",
+     "key": "Audit History",
+     "english": "Audit History",
+     "current": "পরিবর্তনের ইতিহাস",
+     "note": "Translated as “change history”.",
+     "plural": false
+    },
+    {
+     "id": "51834e5dc9",
+     "group": "check",
+     "where": "App",
+     "key": "Assign All To…",
+     "english": "Assign All To…",
+     "current": "সবগুলো বরাদ্দ করুন…",
+     "note": "Menu action: give every item to one owner or unit.",
+     "plural": false
+    },
+    {
+     "id": "8d3bab6201",
+     "group": "check",
+     "where": "App",
+     "key": "%lld bd",
+     "english": "%lld bd",
+     "current": "%lld বেড",
+     "note": "Short bedroom label.",
+     "plural": false
+    },
+    {
+     "id": "4c28e0724d",
+     "group": "check",
+     "where": "App",
+     "key": "%@ ba",
+     "english": "%@ ba",
+     "current": "%@ বাথ",
+     "note": "Short bathroom label.",
+     "plural": false
+    }
+   ]
+  },
+  {
+   "code": "id",
+   "native": "Bahasa Indonesia",
+   "name": "Indonesian",
+   "dir": "ltr",
+   "site": "https://lynnsouz.github.io/PropertyAsset/id/",
+   "items": [
+    {
+     "id": "eebb95a1a0",
+     "group": "term",
+     "where": "App",
+     "key": "Properties",
+     "english": "Properties",
+     "current": "Properti",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7000c8e17f",
+     "group": "term",
+     "where": "App",
+     "key": "Transactions",
+     "english": "Transactions",
+     "current": "Transaksi",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "0b28c7d393",
+     "group": "term",
+     "where": "App",
+     "key": "Dashboard",
+     "english": "Dashboard",
+     "current": "Dasbor",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "91e7d6cbca",
+     "group": "term",
+     "where": "App",
+     "key": "Workspace",
+     "english": "Workspace",
+     "current": "Ruang Kerja",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "a8fef08b2c",
+     "group": "term",
+     "where": "App",
+     "key": "Tenants",
+     "english": "Tenants",
+     "current": "Penyewa",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7ed33af8a1",
+     "group": "term",
+     "where": "App",
+     "key": "Recurring item",
+     "english": "Recurring item",
+     "current": "Item berulang",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "97e3efbf41",
+     "group": "term",
+     "where": "App",
+     "key": "Security deposit",
+     "english": "Security deposit",
+     "current": "Deposit jaminan",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4c1a17ec4b",
+     "group": "term",
+     "where": "App",
+     "key": "Waiting for confirmation",
+     "english": "Waiting for confirmation",
+     "current": "Menunggu konfirmasi",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e7b744e73c",
+     "group": "term",
+     "where": "App",
+     "key": "Recently Deleted",
+     "english": "Recently Deleted",
+     "current": "Baru Dihapus",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "term",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "Pemilik",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "b314cf407e",
+     "group": "term",
+     "where": "App",
+     "key": "Admin",
+     "english": "Admin",
+     "current": "Admin",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4a041bee2e",
+     "group": "term",
+     "where": "App",
+     "key": "Editor",
+     "english": "Editor",
+     "current": "Editor",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "term",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "Pelihat",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "2391dbb1a9",
+     "group": "check",
+     "where": "App",
+     "key": "Every cent, in any currency",
+     "english": "Every cent, in any currency",
+     "current": "Setiap sen, dalam mata uang apa pun",
+     "note": "Idiom. It should read naturally and not tie the app to one currency.",
+     "plural": false
+    },
+    {
+     "id": "03beb5bd7b",
+     "group": "check",
+     "where": "Website",
+     "key": "hero_title",
+     "english": "Every property, every owner, every cent. In one place.",
+     "current": "Setiap properti, setiap pemilik, setiap sen. Di satu tempat.",
+     "note": "The website's headline: the same idiom.",
+     "plural": false
+    },
+    {
+     "id": "7942babf71",
+     "group": "check",
+     "where": "Website",
+     "key": "legal_english_only",
+     "english": "",
+     "current": "Untuk saat ini, dokumen ini hanya tersedia dalam bahasa Inggris.",
+     "note": "Notice shown above the Privacy Policy and Terms, which are in English only.",
+     "plural": false
+    },
+    {
+     "id": "67f5e907c1",
+     "group": "check",
+     "where": "App",
+     "key": "Deleted %@ of %@ on %@ (%@)",
+     "english": "Deleted %@ of %@ on %@ (%@)",
+     "current": "%1$@ sebesar %2$@ pada %3$@ dihapus (%4$@)",
+     "note": "Activity history. The placeholders are, in order: income or expense, the amount, the date, the property.",
+     "plural": false
+    },
+    {
+     "id": "8f285ab458",
+     "group": "check",
+     "where": "App",
+     "key": "HOA & condo fees",
+     "english": "HOA & condo fees",
+     "current": "Iuran pengelolaan & IPL",
+     "note": "Uses IPL, an Indonesia-specific term. Fine for readers elsewhere?",
+     "plural": false
+    },
+    {
+     "id": "8af9ca4964",
+     "group": "check",
+     "where": "App",
+     "key": "Mortgage",
+     "english": "Mortgage",
+     "current": "KPR",
+     "note": "Uses KPR, the Indonesian home-loan term.",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "check",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "Pelihat",
+     "note": "Read-only role. “Pelihat” (Google's wording) or “Peninjau”?",
+     "plural": false
+    },
+    {
+     "id": "fbd9b53c72",
+     "group": "check",
+     "where": "App",
+     "key": "Security deposits held",
+     "english": "Security deposits held",
+     "current": "Deposit jaminan yang dipegang",
+     "note": "Deposit still held (dipegang), as opposed to kept by the landlord (ditahan). Clear?",
+     "plural": false
+    },
+    {
+     "id": "330e200988",
+     "group": "check",
+     "where": "App",
+     "key": "Kept (counted as income)",
+     "english": "Kept (counted as income)",
+     "current": "Ditahan (dihitung sebagai pemasukan)",
+     "note": "The part of a deposit the landlord keeps.",
+     "plural": false
+    },
+    {
+     "id": "8d3bab6201",
+     "group": "check",
+     "where": "App",
+     "key": "%lld bd",
+     "english": "%lld bd",
+     "current": "%lld KT",
+     "note": "Short bedroom label (KT).",
+     "plural": false
+    },
+    {
+     "id": "4c28e0724d",
+     "group": "check",
+     "where": "App",
+     "key": "%@ ba",
+     "english": "%@ ba",
+     "current": "%@ KM",
+     "note": "Short bathroom label (KM).",
+     "plural": false
+    },
+    {
+     "id": "d9b19a12fa",
+     "group": "check",
+     "where": "App",
+     "key": "Resend code in %llds",
+     "english": "Resend code in %llds",
+     "current": "Kirim ulang kode dalam %lld dtk",
+     "note": "Countdown in seconds.",
+     "plural": false
+    },
+    {
+     "id": "9402325ba2",
+     "group": "check",
+     "where": "App",
+     "key": "e.g. Harbor Lofts",
+     "english": "e.g. Harbor Lofts",
+     "current": "mis. Griya Pelabuhan",
+     "note": "Example name in a form field, localized.",
+     "plural": false
+    }
+   ]
+  },
+  {
+   "code": "ja",
+   "native": "日本語",
+   "name": "Japanese",
+   "dir": "ltr",
+   "site": "https://lynnsouz.github.io/PropertyAsset/ja/",
+   "items": [
+    {
+     "id": "eebb95a1a0",
+     "group": "term",
+     "where": "App",
+     "key": "Properties",
+     "english": "Properties",
+     "current": "物件",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7000c8e17f",
+     "group": "term",
+     "where": "App",
+     "key": "Transactions",
+     "english": "Transactions",
+     "current": "取引",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "0b28c7d393",
+     "group": "term",
+     "where": "App",
+     "key": "Dashboard",
+     "english": "Dashboard",
+     "current": "ダッシュボード",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "91e7d6cbca",
+     "group": "term",
+     "where": "App",
+     "key": "Workspace",
+     "english": "Workspace",
+     "current": "ワークスペース",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "a8fef08b2c",
+     "group": "term",
+     "where": "App",
+     "key": "Tenants",
+     "english": "Tenants",
+     "current": "入居者",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7ed33af8a1",
+     "group": "term",
+     "where": "App",
+     "key": "Recurring item",
+     "english": "Recurring item",
+     "current": "定期項目",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "97e3efbf41",
+     "group": "term",
+     "where": "App",
+     "key": "Security deposit",
+     "english": "Security deposit",
+     "current": "敷金",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4c1a17ec4b",
+     "group": "term",
+     "where": "App",
+     "key": "Waiting for confirmation",
+     "english": "Waiting for confirmation",
+     "current": "確認待ち",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e7b744e73c",
+     "group": "term",
+     "where": "App",
+     "key": "Recently Deleted",
+     "english": "Recently Deleted",
+     "current": "最近削除した項目",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "term",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "オーナー",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "b314cf407e",
+     "group": "term",
+     "where": "App",
+     "key": "Admin",
+     "english": "Admin",
+     "current": "管理者",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4a041bee2e",
+     "group": "term",
+     "where": "App",
+     "key": "Editor",
+     "english": "Editor",
+     "current": "編集者",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "term",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "閲覧者",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "2391dbb1a9",
+     "group": "check",
+     "where": "App",
+     "key": "Every cent, in any currency",
+     "english": "Every cent, in any currency",
+     "current": "あらゆる通貨で、1円単位まで",
+     "note": "Idiom. It should read naturally and not tie the app to one currency.",
+     "plural": false
+    },
+    {
+     "id": "03beb5bd7b",
+     "group": "check",
+     "where": "Website",
+     "key": "hero_title",
+     "english": "Every property, every owner, every cent. In one place.",
+     "current": "すべての物件、すべての所有者、1円単位まで。ひとつの場所で。",
+     "note": "The website's headline: the same idiom.",
+     "plural": false
+    },
+    {
+     "id": "7942babf71",
+     "group": "check",
+     "where": "Website",
+     "key": "legal_english_only",
+     "english": "",
+     "current": "この文書は現在、英語版のみご用意しています。",
+     "note": "Notice shown above the Privacy Policy and Terms, which are in English only.",
+     "plural": false
+    },
+    {
+     "id": "67f5e907c1",
+     "group": "check",
+     "where": "App",
+     "key": "Deleted %@ of %@ on %@ (%@)",
+     "english": "Deleted %@ of %@ on %@ (%@)",
+     "current": "%3$@ の%1$@ %2$@ を削除（%4$@）",
+     "note": "Activity history. The placeholders are, in order: income or expense, the amount, the date, the property.",
+     "plural": false
+    },
+    {
+     "id": "fbd9b53c72",
+     "group": "check",
+     "where": "App",
+     "key": "Security deposits held",
+     "english": "Security deposits held",
+     "current": "預かり敷金",
+     "note": "Deposit still held.",
+     "plural": false
+    },
+    {
+     "id": "330e200988",
+     "group": "check",
+     "where": "App",
+     "key": "Kept (counted as income)",
+     "english": "Kept (counted as income)",
+     "current": "充当（収入として計上）",
+     "note": "The part of a deposit the landlord keeps. “Kept” has no exact match.",
+     "plural": false
+    },
+    {
+     "id": "4120539f61",
+     "group": "check",
+     "where": "App",
+     "key": "Rents",
+     "english": "Rents",
+     "current": "賃借中",
+     "note": "On a tenant's page: what the tenant rents.",
+     "plural": false
+    },
+    {
+     "id": "512db705e4",
+     "group": "check",
+     "where": "App",
+     "key": "Open",
+     "english": "Open",
+     "current": "未対応",
+     "note": "Status of a maintenance request that hasn't started.",
+     "plural": false
+    },
+    {
+     "id": "f4c6fc55f5",
+     "group": "check",
+     "where": "App",
+     "key": "When due",
+     "english": "When due",
+     "current": "期日になったら",
+     "note": "Option: record a recurring item when it's due.",
+     "plural": false
+    },
+    {
+     "id": "ad3377f97d",
+     "group": "check",
+     "where": "App",
+     "key": "Every",
+     "english": "Every",
+     "current": "頻度",
+     "note": "Label of the picker for how often something repeats.",
+     "plural": false
+    },
+    {
+     "id": "30e4f11b94",
+     "group": "check",
+     "where": "App",
+     "key": "Report in %@?",
+     "english": "Report in %@?",
+     "current": "%@ でレポートしますか？",
+     "note": "Question: switch the report to this currency?",
+     "plural": false
+    },
+    {
+     "id": "c1c3174275",
+     "group": "check",
+     "where": "App",
+     "key": "Apartment",
+     "english": "Apartment",
+     "current": "マンション",
+     "note": "Property type.",
+     "plural": false
+    },
+    {
+     "id": "4c87b67d42",
+     "group": "check",
+     "where": "App",
+     "key": "House",
+     "english": "House",
+     "current": "一戸建て",
+     "note": "Property type.",
+     "plural": false
+    },
+    {
+     "id": "8d3bab6201",
+     "group": "check",
+     "where": "App",
+     "key": "%lld bd",
+     "english": "%lld bd",
+     "current": "寝室 %lld",
+     "note": "Short bedroom label.",
+     "plural": false
+    },
+    {
+     "id": "4c28e0724d",
+     "group": "check",
+     "where": "App",
+     "key": "%@ ba",
+     "english": "%@ ba",
+     "current": "浴室 %@",
+     "note": "Short bathroom label.",
+     "plural": false
+    }
+   ]
+  },
+  {
+   "code": "ru",
+   "native": "Русский",
+   "name": "Russian",
+   "dir": "ltr",
+   "site": "https://lynnsouz.github.io/PropertyAsset/ru/",
+   "items": [
+    {
+     "id": "eebb95a1a0",
+     "group": "term",
+     "where": "App",
+     "key": "Properties",
+     "english": "Properties",
+     "current": "Объекты",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7000c8e17f",
+     "group": "term",
+     "where": "App",
+     "key": "Transactions",
+     "english": "Transactions",
+     "current": "Операции",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "0b28c7d393",
+     "group": "term",
+     "where": "App",
+     "key": "Dashboard",
+     "english": "Dashboard",
+     "current": "Сводка",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "91e7d6cbca",
+     "group": "term",
+     "where": "App",
+     "key": "Workspace",
+     "english": "Workspace",
+     "current": "Пространство",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "a8fef08b2c",
+     "group": "term",
+     "where": "App",
+     "key": "Tenants",
+     "english": "Tenants",
+     "current": "Арендаторы",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "7ed33af8a1",
+     "group": "term",
+     "where": "App",
+     "key": "Recurring item",
+     "english": "Recurring item",
+     "current": "Регулярная операция",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "97e3efbf41",
+     "group": "term",
+     "where": "App",
+     "key": "Security deposit",
+     "english": "Security deposit",
+     "current": "Залог",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4c1a17ec4b",
+     "group": "term",
+     "where": "App",
+     "key": "Waiting for confirmation",
+     "english": "Waiting for confirmation",
+     "current": "Ожидает подтверждения",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e7b744e73c",
+     "group": "term",
+     "where": "App",
+     "key": "Recently Deleted",
+     "english": "Recently Deleted",
+     "current": "Недавно удаленные",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "1b4c30d097",
+     "group": "term",
+     "where": "App",
+     "key": "Owner",
+     "english": "Owner",
+     "current": "Владелец",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "b314cf407e",
+     "group": "term",
+     "where": "App",
+     "key": "Admin",
+     "english": "Admin",
+     "current": "Администратор",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "4a041bee2e",
+     "group": "term",
+     "where": "App",
+     "key": "Editor",
+     "english": "Editor",
+     "current": "Редактор",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "e520aac7e1",
+     "group": "term",
+     "where": "App",
+     "key": "Viewer",
+     "english": "Viewer",
+     "current": "Наблюдатель",
+     "note": "",
+     "plural": false
+    },
+    {
+     "id": "2391dbb1a9",
+     "group": "check",
+     "where": "App",
+     "key": "Every cent, in any currency",
+     "english": "Every cent, in any currency",
+     "current": "Каждая копейка в любой валюте",
+     "note": "Idiom. It should read naturally and not tie the app to one currency.",
+     "plural": false
+    },
+    {
+     "id": "03beb5bd7b",
+     "group": "check",
+     "where": "Website",
+     "key": "hero_title",
+     "english": "Every property, every owner, every cent. In one place.",
+     "current": "Каждый объект, каждый владелец, каждая копейка. В одном месте.",
+     "note": "The website's headline: the same idiom.",
+     "plural": false
+    },
+    {
+     "id": "7942babf71",
+     "group": "check",
+     "where": "Website",
+     "key": "legal_english_only",
+     "english": "",
+     "current": "Пока этот документ доступен только на английском языке.",
+     "note": "Notice shown above the Privacy Policy and Terms, which are in English only.",
+     "plural": false
+    },
+    {
+     "id": "67f5e907c1",
+     "group": "check",
+     "where": "App",
+     "key": "Deleted %@ of %@ on %@ (%@)",
+     "english": "Deleted %@ of %@ on %@ (%@)",
+     "current": "Удален %1$@ на сумму %2$@ от %3$@ (%4$@)",
+     "note": "Activity history. The placeholders are, in order: income or expense, the amount, the date, the property.",
+     "plural": false
+    },
+    {
+     "id": "25a36846c9",
+     "group": "check",
+     "where": "App",
+     "key": "Every %@",
+     "english": "Every %@",
+     "current": "Интервал: %@",
+     "note": "Written as “Interval: …” so the inserted text (“1 неделя”) keeps its case.",
+     "plural": false
+    },
+    {
+     "id": "6a90095644",
+     "group": "check",
+     "where": "App",
+     "key": "Every %lld months",
+     "english": "Every %lld months",
+     "current": "Каждые %lld мес.",
+     "note": "Abbreviated (мес.) to avoid number agreement. Acceptable?",
+     "plural": false
+    },
+    {
+     "id": "ad3377f97d",
+     "group": "check",
+     "where": "App",
+     "key": "Every",
+     "english": "Every",
+     "current": "Периодичность",
+     "note": "Label of the picker for how often something repeats.",
+     "plural": false
+    },
+    {
+     "id": "7630e7175b",
+     "group": "check",
+     "where": "App",
+     "key": "%@ · %lld overdue since %@",
+     "english": "%@ · %lld overdue since %@",
+     "current": "%1$@ · просрочено: %2$lld с %3$@",
+     "note": "e.g. “Harbor Lofts · 2 overdue since 1 Jun”.",
+     "plural": false
+    },
+    {
+     "id": "8d3bab6201",
+     "group": "check",
+     "where": "App",
+     "key": "%lld bd",
+     "english": "%lld bd",
+     "current": "%lld спал.",
+     "note": "Short bedroom label.",
+     "plural": false
+    },
+    {
+     "id": "4c28e0724d",
+     "group": "check",
+     "where": "App",
+     "key": "%@ ba",
+     "english": "%@ ba",
+     "current": "%@ ван.",
+     "note": "Short bathroom label.",
+     "plural": false
+    },
+    {
+     "id": "9402325ba2",
+     "group": "check",
+     "where": "App",
+     "key": "e.g. Harbor Lofts",
+     "english": "e.g. Harbor Lofts",
+     "current": "напр., ЖК «Гавань»",
+     "note": "Example name in a form field, localized (with quotation marks inside).",
+     "plural": false
+    }
+   ]
+  }
+ ]
+}

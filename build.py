@@ -250,6 +250,8 @@ def main() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(ROOT / "assets", OUT / "assets")
+    # The translation review form (unlisted, noindex): a static page served as is.
+    shutil.copytree(ROOT / "review", OUT / "review")
     written = []
     for lang in LANGUAGES:
         t, home = strings[lang], base + folder(lang)

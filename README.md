@@ -17,6 +17,7 @@ content/legal/*.md   Privacy Policy and Terms, copied from the backend repo — 
 assets/              Stylesheet, icons, app screenshots (light and dark, one folder per language)
 build.py             Static site builder (Python standard library only) → _site/
 scripts/sync.sh      Copies legal texts and screenshots from the sibling repos
+review/              Translation review form for native speakers (unlisted): /review/
 ```
 
 ## Working on it
@@ -35,3 +36,8 @@ same text, and each language's pages show the app in that language.
 
 **At launch.** Set `support_email` and `app_store_url` in `site.json`; the support page and the
 download button pick them up.
+
+**Translation review.** Send native speakers <https://lynnsouz.github.io/PropertyAsset/review/>. They
+check the key terms and flagged strings of their language one at a time (from `review/data.json`, which
+`scripts/review-data.py` writes from the app's catalogs; `scripts/sync.sh` runs it), then open a
+pre-filled GitHub issue in this repository or copy their answers to send by email.

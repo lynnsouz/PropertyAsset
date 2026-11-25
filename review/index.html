@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Translation Review · Property Asset</title>
+<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="review.css">
+<script src="review.js" defer></script>
+</head>
+<body>
+<header class="bar">
+  <span class="brand"><img src="../assets/images/favicon.png" alt="" width="28" height="28"> Property Asset</span>
+  <span class="bar-title">Translation review</span>
+</header>
+
+<div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
+
+<main id="app" class="stage" aria-live="polite">
+  <!-- Start -->
+  <section class="screen" id="screen-start">
+    <h1>Help us check Property Asset in your language</h1>
+    <p class="lede">Property Asset is an app for landlords and co-owners: properties, tenants, rent, income and
+      expenses. It was translated by machine, so we're asking native speakers to check the words that matter most.
+      It takes about 10 minutes, one question at a time.</p>
+    <label class="field" for="reviewer">Your name <span class="optional">(optional)</span></label>
+    <input id="reviewer" type="text" autocomplete="name" placeholder="So we know who to thank">
+    <p class="field">Which language are you reviewing?</p>
+    <div class="langs" id="langs"></div>
+    <p class="fine">Your answers are saved in this browser as you go, so you can stop and come back later.</p>
+  </section>
+
+  <!-- One item -->
+  <section class="screen" id="screen-item" hidden>
+    <p class="step"><span id="item-group"></span> <span id="item-count"></span></p>
+    <div class="source">
+      <span class="tag" id="item-where"></span>
+      <p class="label">English</p>
+      <p class="english" id="item-english"></p>
+    </div>
+    <p class="label">Current translation</p>
+    <p class="current" id="item-current"></p>
+    <p class="note" id="item-note"></p>
+
+    <div class="choices" role="group" aria-label="Your answer">
+      <button type="button" class="choice" data-status="ok"><kbd>1</kbd> Looks right</button>
+      <button type="button" class="choice" data-status="change"><kbd>2</kbd> Suggest a change</button>
+      <button type="button" class="choice" data-status="unsure"><kbd>3</kbd> Not sure</button>
+    </div>
+
+    <div class="edit" id="item-edit" hidden>
+      <label class="label" for="suggestion">Your version</label>
+      <textarea id="suggestion" rows="3"></textarea>
+      <p class="warn" id="placeholder-warn" hidden></p>
+    </div>
+    <div class="comment" id="item-comment" hidden>
+      <label class="label" for="comment">Comment <span class="optional">(optional)</span></label>
+      <input id="comment" type="text" placeholder="Why, or what you'd suggest instead">
+    </div>
+
+    <div class="nav">
+      <button type="button" class="link" id="back">← Back</button>
+      <button type="button" class="primary" id="next" disabled>Continue <kbd>Enter ↵</kbd></button>
+    </div>
+  </section>
+
+  <!-- Anything else -->
+  <section class="screen" id="screen-other" hidden>
+    <h2>Anything else?</h2>
+    <p class="lede">Have a look at the website in your language, with screenshots of the app:
+      <a id="site-link" target="_blank" rel="noopener">open it in a new tab</a>. If anything reads wrong, note it here.</p>
+    <label class="label" for="other">Other feedback <span class="optional">(optional)</span></label>
+    <textarea id="other" rows="6" placeholder="For example: the word for “Dashboard” on the second screenshot sounds too technical."></textarea>
+    <div class="nav">
+      <button type="button" class="link" id="other-back">← Back</button>
+      <button type="button" class="primary" id="other-next">Review and send</button>
+    </div>
+  </section>
+
+  <!-- Send -->
+  <section class="screen" id="screen-send" hidden>
+    <h2>Thank you! Last step: send your answers</h2>
+    <p class="lede" id="summary"></p>
+    <div class="send">
+      <div class="send-option">
+        <h3>With a GitHub account</h3>
+        <p>Opens a new issue with your answers filled in. Press <strong>Submit new issue</strong> there.</p>
+        <a class="primary" id="send-github" target="_blank" rel="noopener" href="#">Open a GitHub issue</a>
+      </div>
+      <div class="send-option">
+        <h3>Without one</h3>
+        <p>Copy your answers and send them to the person who asked you to review, by email or message.</p>
+        <button type="button" class="primary" id="send-copy">Copy answers</button>
+      </div>
+    </div>
+    <p class="status" id="send-status" role="status"></p>
+    <details>
+      <summary>See your answers as text</summary>
+      <textarea id="answers-text" rows="12" readonly></textarea>
+    </details>
+    <h3>Change an answer</h3>
+    <ol class="review-list" id="review-list"></ol>
+    <button type="button" class="link" id="restart">Review another language</button>
+  </section>
+
+  <noscript><p class="lede">This review needs JavaScript. Please turn it on, or ask for the list by email.</p></noscript>
+</main>
+</body>
+</html>

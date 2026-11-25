@@ -33,3 +33,6 @@ if compgen -G "$APP/build/screenshots/*/*.png" >/dev/null; then
 else
   echo "• No screenshots in $APP/build/screenshots (run: mise run screenshots in the app repo)"
 fi
+
+# The translation review page (review/) shows the current translations.
+PA_APP_DIR="$APP" python3 -I scripts/review-data.py
