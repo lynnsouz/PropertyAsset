@@ -12,7 +12,8 @@ Every page is built in each of the app's languages: English at the root, the oth
 Text lives in content/i18n/<lang>.json; en.json is the source, and every language needs every key.
 Placeholders in pages: {{t:<key>}} (translated text), {{home}} (this language's root), {{base}}
 (the site root, for assets), {{app_store_button}}, {{contact}}, and {{shot:<name>:<alt key>}} for a
-screenshot in assets/images/screenshots/<name>-light.jpg / -dark.jpg (iPhone frame). {{ipad:…}} and
+screenshot in assets/images/screenshots/<lang>/<name>-light.jpg / -dark.jpg (iPhone frame), captured
+in the page's language. {{ipad:…}} and
 {{mac:…}} take the same arguments for a landscape iPad capture, in an iPad frame or a Mac window.
 """
 import datetime
@@ -108,7 +109,9 @@ def bullets(block: list[str]) -> str:
 # MARK: - Languages
 
 # The app's languages. English is at the site root; the others in a folder named after the code.
-LANGUAGES = ["en", "pt-BR", "es", "fr", "de", "it", "sv", "da", "nb", "fi"]
+LANGUAGES = ["en", "pt-BR", "es", "fr", "de", "it", "sv", "da", "nb", "fi", "ar", "zh-Hans", "hi", "bn", "id", "ja", "ru"]
+# Written right to left: the page gets dir="rtl" and the stylesheet uses logical (start/end) properties.
+RTL = {"ar"}
 GLOBE = ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" '
          'stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
          '<path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg>')
@@ -134,8 +137,16 @@ def load_strings() -> dict[str, dict[str, str]]:
 
 # MARK: - Pages
 
-def screenshot(base: str, name: str, alt: str) -> str:
-    path = f"{base}assets/images/screenshots"
+def shots(base: str, lang: str, name: str) -> str:
+    """This language's screenshot folder (the app captured in that language); fails if a capture is missing."""
+    folder = f"assets/images/screenshots/{lang.lower()}"
+    for appearance in ("light", "dark"):
+        assert (ROOT / folder / f"{name}-{appearance}.jpg").exists(), f"missing {folder}/{name}-{appearance}.jpg (scripts/sync.sh)"
+    return base + folder
+
+
+def screenshot(base: str, lang: str, name: str, alt: str) -> str:
+    path = shots(base, lang, name)
     return (
         f'<div class="phone"><picture>'
         f'<source srcset="{path}/{name}-dark.jpg" media="(prefers-color-scheme: dark)">'
@@ -144,8 +155,8 @@ def screenshot(base: str, name: str, alt: str) -> str:
     )
 
 
-def picture(base: str, name: str, alt: str, width: int, height: int) -> str:
-    path = f"{base}assets/images/screenshots"
+def picture(base: str, lang: str, name: str, alt: str, width: int, height: int) -> str:
+    path = shots(base, lang, name)
     return (
         f'<picture><source srcset="{path}/{name}-dark.jpg" media="(prefers-color-scheme: dark)">'
         f'<img src="{path}/{name}-light.jpg" alt="{html.escape(alt)}" width="{width}" height="{height}" loading="lazy">'
@@ -153,19 +164,19 @@ def picture(base: str, name: str, alt: str, width: int, height: int) -> str:
     )
 
 
-def ipad(base: str, name: str, alt: str) -> str:
-    return f'<div class="ipad">{picture(base, name, alt, 1600, 1103)}</div>'
+def ipad(base: str, lang: str, name: str, alt: str) -> str:
+    return f'<div class="ipad">{picture(base, lang, name, alt, 1600, 1103)}</div>'
 
 
-def mac(base: str, name: str, alt: str) -> str:
+def mac(base: str, lang: str, name: str, alt: str) -> str:
     """A Mac window around an iPad capture; the Mac shows the app without the iPad status bar, so it's cropped."""
     return (
         '<div class="mac"><div class="mac-bar" aria-hidden="true"><i></i><i></i><i></i><span>Property Asset</span></div>'
-        f'<div class="mac-screen">{picture(base, name, alt, 1600, 1103)}</div></div>'
+        f'<div class="mac-screen">{picture(base, lang, name, alt, 1600, 1103)}</div></div>'
     )
 
 
-def fill(template: str, config: dict, base: str, t: dict[str, str]) -> str:
+def fill(template: str, config: dict, base: str, lang: str, t: dict[str, str]) -> str:
     if config["app_store_url"]:
         button = f'<a class="button" href="{html.escape(config["app_store_url"])}">{t["app_store_download"]}</a>'
     else:
@@ -176,9 +187,9 @@ def fill(template: str, config: dict, base: str, t: dict[str, str]) -> str:
                    f'<p>{t["contact_reply"]}</p></div>')
     else:
         contact = f'<div class="contact"><p>{t["contact_soon"]}</p></div>'
-    template = re.sub(r"\{\{shot:([\w-]+):(\w+)\}\}", lambda m: screenshot(base, m.group(1), t[m.group(2)]), template)
-    template = re.sub(r"\{\{ipad:([\w-]+):(\w+)\}\}", lambda m: ipad(base, m.group(1), t[m.group(2)]), template)
-    template = re.sub(r"\{\{mac:([\w-]+):(\w+)\}\}", lambda m: mac(base, m.group(1), t[m.group(2)]), template)
+    template = re.sub(r"\{\{shot:([\w-]+):(\w+)\}\}", lambda m: screenshot(base, lang, m.group(1), t[m.group(2)]), template)
+    template = re.sub(r"\{\{ipad:([\w-]+):(\w+)\}\}", lambda m: ipad(base, lang, m.group(1), t[m.group(2)]), template)
+    template = re.sub(r"\{\{mac:([\w-]+):(\w+)\}\}", lambda m: mac(base, lang, m.group(1), t[m.group(2)]), template)
     return template.replace("{{app_store_button}}", button).replace("{{contact}}", contact)
 
 
@@ -252,7 +263,7 @@ def main() -> None:
             alternates = "\n".join(
                 f'<link rel="alternate" hreflang="{other}" href="{config["base_url"]}{folder(other)}{path}">'
                 for other in LANGUAGES) + f'\n<link rel="alternate" hreflang="x-default" href="{config["base_url"]}{path}">'
-            page = (layout.replace("{{body}}", fill(body.strip(), config, base, t))
+            page = (layout.replace("{{body}}", fill(body.strip(), config, base, lang, t))
                     .replace("{{nav}}", navigation(home, file, t) + language_menu(base, lang, file, strings))
                     .replace("{{alternates}}", "" if file == "404.html" else alternates)
                     .replace("{{title}}", html.escape(re.sub(r"&nbsp;", " ", title)))
@@ -261,6 +272,7 @@ def main() -> None:
                     .replace("{{base_url}}", config["base_url"])
                     .replace("{{page_class}}", file.removesuffix(".html"))
                     .replace("{{lang}}", lang)
+                    .replace("{{dir}}", "rtl" if lang in RTL else "ltr")
                     .replace("{{year}}", str(datetime.date.today().year)))
             page = re.sub(r"\{\{t:(\w+)\}\}", lambda m: t[m.group(1)], page)
             page = page.replace("{{home}}", home).replace("{{base}}", base)

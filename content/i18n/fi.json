@@ -17,7 +17,7 @@
   "app_store_soon": "Tulossa pian App Storeen",
   "app_store_download": "Lataa App Storesta",
   "see_what": "Katso, mitä se tekee",
-  "platforms": "iPhonelle, iPadille ja Macille · iOS 18.1 tai uudempi · 10 kieltä · Ilmainen",
+  "platforms": "iPhonelle, iPadille ja Macille · iOS 18.1 tai uudempi · 17 kieltä · Ilmainen",
   "shot_dashboard": "Yleiskatsaus, jossa salkun arvo, nettotulos, tulot ja menot",
 
   "features_title": "Tehty niille, jotka omistavat kiinteistöjä yhdessä",
@@ -70,7 +70,7 @@
   "q_devices": "Millä laitteilla se toimii?",
   "a_devices": "iPhonella ja iPadilla, joissa on iOS 18.1 tai uudempi, sekä Apple-sirullisilla Maceilla. Tietosi synkronoidaan niiden välillä.",
   "q_languages": "Mitä kieliä se puhuu?",
-  "a_languages": "Englantia, portugalia (Brasilia), espanjaa, ranskaa, saksaa, italiaa, ruotsia, tanskaa, norjaa ja suomea. Se seuraa laitteesi kieltä, tai voit valita kielen apissa.",
+  "a_languages": "Englantia, portugalia (Brasilia), espanjaa, ranskaa, saksaa, italiaa, ruotsia, tanskaa, norjaa, suomea, arabiaa, kiinaa (yksinkertaistettu), hindiä, bengalia, indonesiaa, japania ja venäjää. Se seuraa laitteesi kieltä, tai voit valita kielen apissa.",
   "q_partner": "Voiko kumppanini tai kirjanpitäjäni nähdä luvut?",
   "a_partner": "Kyllä. Kutsu heidät työtilaasi muokkaajaksi tai lukijaksi. Lukijat näkevät kaiken mutta eivät voi muuttaa mitään.",
   "q_offline": "Mitä tapahtuu, jos olen ilman verkkoa?",
