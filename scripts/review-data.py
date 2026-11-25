@@ -3,8 +3,8 @@
 
     python3 -I scripts/review-data.py      (scripts/sync.sh runs it)
 
-For each language under review: the key terms that repeat on every screen, then the strings its
-translator was unsure about, with the current text from the app's String Catalogs
+For every language but English: the key terms that repeat on every screen, then the strings its
+translator was unsure about (or, for the earlier languages, the ones that were hard elsewhere), with the current text from the app's String Catalogs
 (../Property Asset, or PA_APP_DIR) and from content/i18n/.
 """
 import glob
@@ -113,6 +113,28 @@ LANGUAGES = [
 ]
 
 
+# Languages translated before the review notes existed: the strings that were hard in the newer
+# languages (short labels, deposit wording, local terms, sentences with several placeholders).
+DEFAULT_FLAGS = [
+    ("app", "%lld bd", "Short bedroom label on property cards; it should stay short."),
+    ("app", "%@ ba", "Short bathroom label on property cards; it should stay short."),
+    ("app", "Security deposits held", "Deposit still held, to be returned to the tenant."),
+    ("app", "Kept (counted as income)", "The part of a deposit the landlord keeps."),
+    ("app", "HOA & condo fees", "Owners' association or building fees. Is this the usual local term?"),
+    ("app", "Mortgage", "Expense category: loan payments on the property."),
+    ("app", "Rents", "On a tenant's page: what the tenant rents."),
+    ("app", "Open", "Status of a maintenance request that hasn't started."),
+    ("app", "Every", "Label of the picker for how often something repeats."),
+    ("app", "In %@ · Out %@", "Money in and money out for a period."),
+    ("app", "%@ a year on %@", "Yield, e.g. “5% a year on $300,000”."),
+    ("app", "1 %@ in %@", "Exchange-rate label, e.g. “1 USD in EUR”."),
+]
+# (code, English name, direction); the native name comes from the website's language file.
+EARLIER = [("pt-BR", "Portuguese (Brazil)", "ltr"), ("es", "Spanish", "ltr"), ("fr", "French", "ltr"),
+           ("de", "German", "ltr"), ("it", "Italian", "ltr"), ("sv", "Swedish", "ltr"), ("da", "Danish", "ltr"),
+           ("nb", "Norwegian (Bokmål)", "ltr"), ("fi", "Finnish", "ltr")]
+
+
 def load_catalog() -> dict:
     strings: dict = {}
     for path in glob.glob(str(APP / "**/Localizable.xcstrings"), recursive=True):
@@ -142,7 +164,9 @@ def main() -> None:
     catalog = load_catalog()
     english_web = json.loads((ROOT / "content/i18n/en.json").read_text(encoding="utf-8"))
     languages = []
-    for code, native, name, direction, flagged in LANGUAGES:
+    earlier = [(code, json.loads((ROOT / f"content/i18n/{code}.json").read_text(encoding="utf-8"))["language_name"],
+                name, direction, DEFAULT_FLAGS) for code, name, direction in EARLIER]
+    for code, native, name, direction, flagged in LANGUAGES + earlier:
         web = json.loads((ROOT / f"content/i18n/{code}.json").read_text(encoding="utf-8"))
         items = []
         for term in TERMS:
